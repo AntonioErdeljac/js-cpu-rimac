@@ -5,4 +5,4 @@ const CPU = {
   details: () => si.cpu().then((details) => details),
 };
 
-export default CPU;
+module.exports = CPU;
