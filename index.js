@@ -2,8 +2,8 @@ const si = require('systeminformation');
 
 const CPU = {
   temperature: () => si.cpuTemperature().then((temperature) => temperature),
-  details: () => si.cpu().then((details) => details)
-}
+  details: () => si.cpu().then((details) => details),
+};
 
 setInterval(async () => {
   try {
@@ -13,12 +13,12 @@ setInterval(async () => {
     const payload = {
       cpu: {
         temperature: temperature.main,
-        ...details
-      }
-    }
+        ...details,
+      },
+    };
 
-    console.log(payload)
-  } catch(error) {
-    console.error(error)
+    console.log(payload);
+  } catch (error) {
+    console.error(error);
   }
 }, 1000);
