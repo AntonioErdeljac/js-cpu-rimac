@@ -9,9 +9,7 @@ setInterval(async () => {
       cpu: info,
     };
 
-    const timestamp = `[CPU - ${new Date().toLocaleTimeString()}]`;
-
-    logger(timestamp, payload);
+    logger(payload);
   } catch (error) {
     logger(error);
   }
