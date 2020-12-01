@@ -13,8 +13,10 @@ setInterval(async () => {
       },
     };
 
-    logger(payload);
+    const timestamp = `[CPU - ${new Date().toLocaleTimeString()}]`;
+
+    logger(timestamp, payload);
   } catch (error) {
-    logger(error, 'error');
+    logger(error);
   }
 }, POLLING_INTERVAL);
