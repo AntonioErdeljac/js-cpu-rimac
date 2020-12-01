@@ -3,14 +3,10 @@ const { POLLING_INTERVAL } = require('./constants');
 
 setInterval(async () => {
   try {
-    const temperature = await cpu.temperature();
-    const details = await cpu.details();
+    const info = await cpu.get();
 
     const payload = {
-      cpu: {
-        temperature: temperature.main,
-        ...details,
-      },
+      cpu: info,
     };
 
     const timestamp = `[CPU - ${new Date().toLocaleTimeString()}]`;
