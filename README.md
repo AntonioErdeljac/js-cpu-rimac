@@ -15,7 +15,7 @@ git clone https://github.com/AntonioErdeljac/js-cpu-rimac.git
 npm i
 ```
 
-## Available commands
+### Available commands
 
 Running commands with npm `npm run [command]`
 
@@ -23,7 +23,7 @@ Running commands with npm `npm run [command]`
 | :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `start`            | Starts a development instance of app                                                                                                                                        |
 
-## Environment variables
+### Environment variables
 
 Copy content from `.env.example` to `.env`
 
