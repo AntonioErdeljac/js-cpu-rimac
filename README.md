@@ -25,7 +25,7 @@ Running commands with npm `npm run [command]`
 
 ## Environment variables
 
-Running commands with npm `npm run [command]`
+Copy content from `.env.example` to `.env`
 
 | variable           | description                              | required                                                                                                                         |
 | :----------------- | :--------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
