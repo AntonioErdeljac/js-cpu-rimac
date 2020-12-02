@@ -1,5 +1,5 @@
 const api = require('./api');
-const cpu = require('./cpu');
+const sysinfo = require('./sysinfo');
 const logger = require('./logger');
 
-module.exports = { api, cpu, logger };
+module.exports = { api, sysinfo, logger };
