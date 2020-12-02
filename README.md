@@ -22,3 +22,11 @@ Running commands with npm `npm run [command]`
 | command            | description                                                                                                                                                                 |
 | :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `start`            | Starts a development instance of app                                                                                                                                        |
+
+## Environment variables
+
+Running commands with npm `npm run [command]`
+
+| command            | description                              | required                                                                                                                         |
+| :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `FIREBASE_API`     | URL to firebase realtime database        | true                                                                                                                             |
