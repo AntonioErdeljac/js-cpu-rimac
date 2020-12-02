@@ -9,7 +9,7 @@ setInterval(async () => {
   try {
     const info = await sysinfo.get();
 
-    api.put(paths.cpu, { ...info });
+    api.put(paths.info, { ...info });
   } catch (error) {
     logger(error);
   }

@@ -1,3 +1,3 @@
 module.exports = {
-  cpu: '/cpu.json',
+  info: '/info.json',
 };
