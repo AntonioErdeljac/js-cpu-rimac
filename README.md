@@ -19,6 +19,8 @@ npm i
 
 Running commands with npm `npm run [command]`
 
+**Make sure to start your terminal in administrator mode**
+
 | command            | description                                                                                                                                                                 |
 | :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `start`            | Starts a development instance of app                                                                                                                                        |
