@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:ci": "jest --watchAll=false"
   },
   "author": "Antonio Erdeljac",
   "license": "ISC",
@@ -35,6 +36,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
+      "pre-push": "npm run test:ci",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
