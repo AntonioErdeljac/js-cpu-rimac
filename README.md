@@ -48,11 +48,11 @@ Copy content from `.env.example` to `.env`, firebase variables must correspond t
 
 | variable                                     | required                           |
 | :------------------------------------------- | :----------------------------------|
-| `REACT_APP_FIREBASE_API_KEY`                 | true                               |
-| `REACT_APP_FIREBASE_AUTH_DOMAIN`             | true                               |
-| `REACT_APP_FIREBASE_DATABASE_URL`            | true                               |
-| `REACT_APP_FIREBASE_PROJECT_ID`              | true                               |
-| `REACT_APP_FIREBASE_STORAGE_BUCKET`          | true                               |
-| `REACT_APP_FIREBASE_MESSAGING_SENDER_ID`     | true                               |
-| `REACT_APP_FIREBASE_APP_ID`                  | true                               |
-| `REACT_APP_FIREBASE_MEASUREMENT_ID`          | true                              
+| `FIREBASE_API_KEY`                 | true                               |
+| `FIREBASE_AUTH_DOMAIN`             | true                               |
+| `FIREBASE_DATABASE_URL`            | true                               |
+| `FIREBASE_PROJECT_ID`              | true                               |
+| `FIREBASE_STORAGE_BUCKET`          | true                               |
+| `FIREBASE_MESSAGING_SENDER_ID`     | true                               |
+| `FIREBASE_APP_ID`                  | true                               |
+| `FIREBASE_MEASUREMENT_ID`          | true                              
