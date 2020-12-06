@@ -17,8 +17,7 @@ const sync = (params) => {
       };
 
       const ref = api.db.ref(collections.INFO);
-      ref.update(values);
-      return values;
+      return ref.update(values);
     } catch (e) {
       return e;
     }

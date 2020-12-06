@@ -1,6 +1,6 @@
 # js-cpu-rimac
 
-A lightweight CPU reader in place of an automobile vehicle. Serves as a machine module with relevant diagnostics for (personal) M2M project for Rimac. Goes along with [js-web-rimac](https://github.com/AntonioErdeljac/js-web-rimac)
+A lightweight SysInfo reader in place of an automobile vehicle. Serves as a machine module with relevant diagnostics for (personal) M2M project for Rimac. Goes along with [js-web-rimac](https://github.com/AntonioErdeljac/js-web-rimac)
 
 ### CI / CD
 ![Node.js CI](https://github.com/AntonioErdeljac/js-cpu-rimac/workflows/Node.js%20CI/badge.svg)
@@ -41,10 +41,18 @@ Running commands with npm `npm run [command]`
 | `lint`             | Lints all relevant project files                                                                            |
 | `lint:fix`         | Lints all relevant project files and fixes as much as automatically possible                                |
 
+
 ### Environment variables
 
-Copy content from `.env.example` to `.env`
+Copy content from `.env.example` to `.env`, firebase variables must correspond to [js-web-rimac](https://github.com/AntonioErdeljac/js-web-rimac)
 
-| variable           | description                              | required                                                                                                                         |
-| :----------------- | :--------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `FIREBASE_API`     | URL to firebase realtime database        | true                                                                                                                             |
+| variable                                     | required                           |
+| :------------------------------------------- | :----------------------------------|
+| `REACT_APP_FIREBASE_API_KEY`                 | true                               |
+| `REACT_APP_FIREBASE_AUTH_DOMAIN`             | true                               |
+| `REACT_APP_FIREBASE_DATABASE_URL`            | true                               |
+| `REACT_APP_FIREBASE_PROJECT_ID`              | true                               |
+| `REACT_APP_FIREBASE_STORAGE_BUCKET`          | true                               |
+| `REACT_APP_FIREBASE_MESSAGING_SENDER_ID`     | true                               |
+| `REACT_APP_FIREBASE_APP_ID`                  | true                               |
+| `REACT_APP_FIREBASE_MEASUREMENT_ID`          | true                              
