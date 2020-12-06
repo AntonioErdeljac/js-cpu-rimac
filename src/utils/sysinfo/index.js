@@ -1,10 +1,10 @@
 const si = require('systeminformation');
 const { addSeconds } = require('date-fns');
 
-const api = require('../api');
-const { collections, POLLING_INTERVAL } = require('../../constants');
+const logger = require('../logger');
+const { POLLING_INTERVAL } = require('../../constants');
 
-const sync = (params) => {
+const observe = (params, cb) => {
   const callback = async (data) => {
     try {
       const { main } = await si.cpuTemperature();
@@ -16,14 +16,13 @@ const sync = (params) => {
         expiresAt: addSeconds(new Date(), 5),
       };
 
-      const ref = api.db.ref(collections.INFO);
-      return ref.update(values);
+      return cb(values);
     } catch (e) {
-      return e;
+      return logger.error(e);
     }
   };
 
   si.observe(params, POLLING_INTERVAL, callback);
 };
 
-module.exports = { sync };
+module.exports = { observe };

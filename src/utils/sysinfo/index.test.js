@@ -12,12 +12,17 @@ jest.mock('systeminformation', () => ({
 
 describe('sysinfo util', () => {
   it('starts observing dynamic data', async () => {
-    sysinfo.sync({
-      battery: 'percent',
-      temp: '*',
-      mem: '*',
-      networkConnections: '*',
-    });
+    const callback = jest.fn();
+
+    sysinfo.observe(
+      {
+        battery: 'percent',
+        temp: '*',
+        mem: '*',
+        networkConnections: '*',
+      },
+      callback,
+    );
 
     expect(si.observe).toHaveBeenCalled();
   });

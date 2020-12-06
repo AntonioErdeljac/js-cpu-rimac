@@ -14,11 +14,11 @@
   "author": "Antonio Erdeljac",
   "license": "ISC",
   "dependencies": {
-    "axios": "0.21.0",
     "date-fns": "2.16.1",
     "dotenv": "8.2.0",
     "firebase": "8.1.2",
-    "systeminformation": "4.30.10"
+    "systeminformation": "4.30.10",
+    "winston": "3.3.3"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
