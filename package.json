@@ -31,7 +31,7 @@
     "prettier": "2.2.1"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": "eslint"
+    "src/**/*.js": "eslint"
   },
   "husky": {
     "hooks": {
