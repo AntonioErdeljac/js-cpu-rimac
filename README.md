@@ -13,6 +13,10 @@ A lightweight SysInfo reader in place of an automobile vehicle. Serves as a mach
 ### Test
 [![testing: Jest](https://img.shields.io/badge/Tests-Jest-red?logo=jest&style=flat)](https://github.com/facebook/jest)
 
+
+### Database
+[![testing: Enzyme](https://img.shields.io/badge/Database-Firebase-red?logo=firebase&style=flat)](https://github.com/firebase/)
+
 ### Cloning the repository
 
 ```shell
