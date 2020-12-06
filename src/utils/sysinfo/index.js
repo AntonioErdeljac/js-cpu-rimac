@@ -1,7 +1,5 @@
 const si = require('systeminformation');
 
-const logger = require('../logger');
-
 const SYS_INFO = {
   get: async () => {
     try {
@@ -18,7 +16,7 @@ const SYS_INFO = {
         networkConnections: networkConnections.length,
       };
     } catch (error) {
-      return logger(error);
+      return console.log(error);
     }
   },
 };

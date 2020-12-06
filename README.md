@@ -21,9 +21,14 @@ Running commands with npm `npm run [command]`
 
 **Make sure to start your terminal in administrator mode**
 
-| command            | description                                                                                                                                                                 |
-| :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `start`            | Starts a development instance of app                                                                                                                                        |
+| command            | description                                                                                                 |
+| :----------------- | :---------------------------------------------------------------------------------------------------------- |
+| `start`            | Starts a development instance of the app                                                                    |
+| `test`             | Runs unit tests in default mode                                                                             |
+| `test:watch`       | Runs unit tests in watch mode                                                                               |
+| `test:ci`          | Runs unit tests                                                                                             |
+| `lint`             | Lints all relevant project files                                                                            |
+| `lint:fix`         | Lints all relevant project files and fixes as much as automatically possible                                |
 
 ### Environment variables
 
