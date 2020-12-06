@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const { addSeconds } = require('date-fns');
 
-const { api, sysinfo, logger } = require('./utils');
+const { api, sysinfo } = require('./utils');
 const { POLLING_INTERVAL, paths } = require('./constants');
 
 setInterval(async () => {
@@ -11,6 +11,6 @@ setInterval(async () => {
 
     api.put(paths.info, { ...info, expiresAt: addSeconds(new Date(), 5) });
   } catch (error) {
-    logger(error);
+    console.log(error);
   }
 }, POLLING_INTERVAL);
