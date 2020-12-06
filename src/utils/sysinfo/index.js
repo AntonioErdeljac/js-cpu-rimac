@@ -1,24 +1,30 @@
 const si = require('systeminformation');
+const { addSeconds } = require('date-fns');
 
-const SYS_INFO = {
-  get: async () => {
+const api = require('../api');
+const { collections, POLLING_INTERVAL } = require('../../constants');
+
+const sync = (params) => {
+  const callback = async (data) => {
     try {
-      const { temp, battery, mem, networkConnections } = await si.getDynamicData();
-
-      const temperature = temp.main;
-      const batteryPercentage = battery.percent;
-      const memoryPercentage = Math.ceil((mem.used / mem.total) * 100);
-
-      return {
-        temperature,
-        batteryPercentage,
-        memoryPercentage,
-        networkConnections: networkConnections.length,
+      const { main } = await si.cpuTemperature();
+      const values = {
+        temperature: main,
+        batteryPercentage: data.battery.percent,
+        memoryPercentage: Math.ceil((data.mem.used / data.mem.total) * 100),
+        networkConnections: data.networkConnections.length,
+        expiresAt: addSeconds(new Date(), 5),
       };
-    } catch (error) {
-      return console.log(error);
+
+      const ref = api.db.ref(collections.INFO);
+      ref.update(values);
+      return values;
+    } catch (e) {
+      return e;
     }
-  },
+  };
+
+  si.observe(params, POLLING_INTERVAL, callback);
 };
 
-module.exports = SYS_INFO;
+module.exports = { sync };

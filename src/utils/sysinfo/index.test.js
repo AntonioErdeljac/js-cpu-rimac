@@ -1,12 +1,24 @@
+const si = require('systeminformation');
+
 const sysinfo = require('./index');
 
-describe('sysinfo util', () => {
-  it('returns all required system information', async () => {
-    const data = await sysinfo.get();
+jest.mock('../api', () => ({
+  db: () => {},
+}));
 
-    expect(data).toHaveProperty('temperature');
-    expect(data).toHaveProperty('batteryPercentage');
-    expect(data).toHaveProperty('memoryPercentage');
-    expect(data).toHaveProperty('networkConnections');
+jest.mock('systeminformation', () => ({
+  observe: jest.fn(),
+}));
+
+describe('sysinfo util', () => {
+  it('starts observing dynamic data', async () => {
+    sysinfo.sync({
+      battery: 'percent',
+      temp: '*',
+      mem: '*',
+      networkConnections: '*',
+    });
+
+    expect(si.observe).toHaveBeenCalled();
   });
 });
