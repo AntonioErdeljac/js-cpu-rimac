@@ -17,6 +17,7 @@
     "axios": "0.21.0",
     "date-fns": "2.16.1",
     "dotenv": "8.2.0",
+    "firebase": "8.1.2",
     "systeminformation": "4.30.10"
   },
   "devDependencies": {

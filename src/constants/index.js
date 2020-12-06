@@ -1,10 +1,8 @@
-const paths = require('./paths');
+const collections = require('./collections');
 
 const POLLING_INTERVAL = 1000;
-const API_BASE = process.env.FIREBASE_API;
 
 module.exports = {
-  paths,
+  collections,
   POLLING_INTERVAL,
-  API_BASE,
 };

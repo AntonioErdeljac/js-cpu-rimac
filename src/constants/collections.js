@@ -1,3 +1,3 @@
 module.exports = {
-  info: '/info.json',
+  INFO: 'info',
 };
